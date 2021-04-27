@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Project</title>
+    <style>
+        h1 {
+            text-align: center
+        }
+
+        body {
+            background-image: url('./background.jpg');
+            background-repeat: no-repeat;
+            background-size: 1920px 850px
+        }
+
+        .container {
+            margin: 1% 12%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .button-container {
+            margin: 1% 25%
+        }
+
+        .button-container > button {
+            padding: 1% 2%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Ninja Boi</h1> -->
+    
+    <canvas id="myCanvas" width=1920px height=850px></canvas>
+    <span id="sound"></span>
+    <div class="button-container">
+        <button id="kick">Kick (down arrow)</button>
+        <button id="punch">Punch (up arrow)</button>
+        <button id="block">Block ()</button>
+        <button id="forward">Forward (right arrow)</button>
+        <button id="backward">Backward (left arrow)</button>
+    </div>
+
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
+<!--
+    let canvas = document.getElementById('myCanvas')
+    let context = canvas.getContext('2d')
+
+    // line
+    context.beginPath()
+    context.moveTo(0, 0)
+    conetext.lineTo(500, 500)
+    context.stroke()
+
+    // arc
+    context.beginPath()
+    context.arc(10, 0, 20, 0, .5 * Math.PI)
+
+    // image
+    let image = document.getElementById('myImage')
+    image.onload = () => {
+        context.drawImage(image, 0, 0, 500, 500) // image location/object, x, y, width, height
+    }
+
+    image.src = <source of the image> 
+
+-->
