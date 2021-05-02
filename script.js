@@ -89,6 +89,16 @@ let loadImages = (callBack) => {
 let x = 0
 
 
+/**
+ * let canvas = document.getElementById('myCanvas')
+ * let context = canvas.getContext('2d')
+ * 
+ * let image = new Image()
+ * image.onload = () => context.drawImage(image, 0, 0, 500, 500)
+ * image.src = 'path
+ */
+
+
 let animate = (context, images, animation, callBack) => {
     images[animation].forEach( (image, idx) => {
         setTimeout( () => {
@@ -166,6 +176,12 @@ loadImages((images) => {
                 animationQueue.push('punch')
                 soundQueue.push('./punch.mp3')
                 break
+        }
+    })
+
+    document.addEventListener('keyup', event => {
+        if (event.code == 'Space') {
+            animationQueue.push('block')
         }
     })
 
